@@ -1,6 +1,6 @@
 # 
 # Completion for cpcc (Copernicus project)
-# version 0.01
+# version 0.011
 # Author: hfm
 # Licence: GPLv3
 #
@@ -11,7 +11,7 @@ _cpcc()
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts="p projects start rm remove cd set-default pwd get-default list ls get getf info log import instance activate deactivate connect set setf trasact commit rollback upload clear-error force-rerun queue q running r heartbeats h command-failed stop-server trust trust-all add-node remove-node list-nodes list-sent-node-requests list-node-requests node-pri network-topology readconf server-info save load version -c"
+    opts="p projects start rm remove cd set-default pwd get-default list ls get getf info log import instance activate deactivate connect set setf transact commit rollback upload clear-error force-rerun queue q running r heartbeats h command-failed stop-server trust trust-all add-node remove-node list-nodes list-sent-node-requests list-node-requests node-pri network-topology readconf server-info save load version -c"
 
     if [[ ${cur} == * ]] ; then
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
