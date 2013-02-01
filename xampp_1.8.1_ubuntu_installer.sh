@@ -4,18 +4,24 @@
 #
 # Author: Hanif F.M.
 # License: GPLv3
-# Version: 0.2
+# Version: 0.3
 # 
 
 FILE_NAME="xampp-linux-1.8.1.tar.gz"
+FILE_NAME2="xampp-linux-devel-1.8.1.tar.gz"
 DOWNLOAD_PATH="http://www.apachefriends.org/download.php?xampp-linux-1.8.1.tar.gz"
+DOWNLOAD_PATH2="http://www.apachefriends.org/download.php?xampp-linux-devel-1.8.1.tar.gz"
 INSTALL_LOCATION="/opt"
 
 #Download XAMPP
 wget $DOWNLOAD_PATH -O $FILE_NAME
 
+#Download XAMPP developer package
+wget $DOWNLOAD_PATH2 -O $FILE_NAME2
+
 #Extract XAMPP in the install location
 sudo tar xvzf $FILE_NAME -C $INSTALL_LOCATION
+sudo tar xvzf $FILE_NAME2 -C $INSTALL_LOCATION
 
 #Change the perission of htdocs
 sudo chmod 777 -R $INSTALL_LOCATION/lampp/htdocs
