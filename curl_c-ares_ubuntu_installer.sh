@@ -38,7 +38,8 @@ fi
 
 echo 'configuring and installing curl with c-ares'
 
-sudo apt-get install libc-ares2
+#sudo apt-get install libc-ares2
+sudo apt-get install libc-ares-dev
 
 cd $EXTRACTED_FOLDER
 RETVAL=$?
