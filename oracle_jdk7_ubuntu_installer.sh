@@ -4,13 +4,13 @@
 # 
 # Author: Hanif F.M.
 # License: GPLv3
-# Version: 0.91
+# Version: 0.92
 # 
 
-ORACLE_DOWNLOAD_PATH="http://download.oracle.com/otn-pub/java/jdk/7u10-b18/"
-FILE_NAME="jdk-7u10-linux-x64.tar.gz"
+ORACLE_DOWNLOAD_PATH="http://download.oracle.com/otn-pub/java/jdk/7u21-b11/"
+FILE_NAME="jdk-7u21-linux-x64.tar.gz"
 DEST_PATH="/usr/lib/jvm/"
-CUR_FOLDER="jdk1.7.0_10"
+CUR_FOLDER="jdk1.7.0_21"
 
 ##############################################################
 
@@ -87,8 +87,8 @@ sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/$CUR_FOL
 CountErrors
 sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/$CUR_FOLDER/bin/javac" 1
 CountErrors
-sudo update-alternatives --install "$MOZILLA_PLUGIN_PATH" "mozilla-javaplugin.so" "/usr/lib/jvm/$CUR_FOLDER/jre/lib/amd64/libnpjp2.so" 1
-CountErrors
+#sudo update-alternatives --install "$MOZILLA_PLUGIN_PATH" "mozilla-javaplugin.so" "/usr/lib/jvm/$CUR_FOLDER/jre/lib/amd64/libnpjp2.so" 1
+#CountErrors
 sudo update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/lib/jvm/$CUR_FOLDER/bin/javaws" 1
 CountErrors
 
@@ -103,7 +103,7 @@ CountErrors
 sudo update-alternatives --set javaws "/usr/lib/jvm/$CUR_FOLDER/bin/javaws"
 CountErrors
 
-if [ ! $ERRORS eq 0 ]; then
+if [ $ERRORS != 0 ]; then
 	echo 'Installation went ok but some configuration didnt. Sum of Errors: '$ERRORS
 fi
 
