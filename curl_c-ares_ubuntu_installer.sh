@@ -4,7 +4,7 @@
 # 
 # Author: Hanif F.M.
 # License: GPLv3
-# Version: 0.1
+# Version: 0.11
 # 
 
 
@@ -56,9 +56,9 @@ if [ $RETVAL -ne 0 ]; then
 	exit 1
 fi
 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
-echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib" >> ~/.bashrc
+#echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib" >> ~/.bashrc
 
 
 ##############################################################

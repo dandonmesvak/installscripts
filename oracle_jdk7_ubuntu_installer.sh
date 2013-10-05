@@ -7,10 +7,10 @@
 # Version: 0.92
 # 
 
-ORACLE_DOWNLOAD_PATH="http://download.oracle.com/otn-pub/java/jdk/7u21-b11/"
-FILE_NAME="jdk-7u21-linux-x64.tar.gz"
+ORACLE_DOWNLOAD_PATH="http://download.oracle.com/otn-pub/java/jdk/7u40-b43/"
+FILE_NAME="jdk-7u40-linux-x64.tar.gz"
 DEST_PATH="/usr/lib/jvm/"
-CUR_FOLDER="jdk1.7.0_21"
+CUR_FOLDER="jdk1.7.0_40"
 
 ##############################################################
 
