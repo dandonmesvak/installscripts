@@ -1,6 +1,6 @@
 #!/bin/bash
 # 
-# This is a simple script for installing Eclipse 4.2 (Juno) on Ubuntu 12.04 64bit
+# This is a simple script for installing Eclipse Java 4.3 (Kepler) on Ubuntu 12.04 64bit
 # 
 # Author: Hanif F.M.
 # License: GPLv3
@@ -10,10 +10,10 @@
 
 
 
-ECLIPSE_DIRECT_DOWNLOAD_PATH="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/juno/SR1/eclipse-java-juno-SR1-linux-gtk-x86_64.tar.gz&r=1"
-FILE_NAME="eclipse-java-juno-SR1-linux-gtk-x86_64.tar.gz"
-DEST_PATH="/usr/opt/ide/"
-CUR_FOLDER="eclipse"
+ECLIPSE_DIRECT_DOWNLOAD_PATH="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/kepler/SR1/eclipse-java-kepler-SR1-linux-gtk-x86_64.tar.gz&r=1"
+FILE_NAME="eclipse-java-kepler-SR1-linux-gtk-x86_64.tar.gz"
+DEST_PATH="/etc/opt/ide/"
+CUR_FOLDER="eclipse_kepler"
 
 ##############################################################
 
@@ -39,16 +39,16 @@ fi
 ###############################################################
 
 
-echo 'checking if '$CUR_FOLDER' folder exists...'
-if [ ! -d "$CUR_FOLDER" ]; then
-	echo $CUR_FOLDER ' doenst exists. Quiting...'
+echo 'checking if eclipse folder exists...'
+if [ ! -d "eclipse" ]; then
+	echo 'eclipse folder doenst exists. Quiting...'
 	exit 1
 fi
 
 
 ###############################################################
 
-echo 'moving folder to' $DEST_PATH
+echo 'moving eclipse folder to' $DEST_PATH
 if [ ! -d "$DEST_PATH" ]; then
 	echo 'creating the destination path: '$DEST_PATH
 	sudo mkdir -p $DEST_PATH
@@ -60,10 +60,10 @@ if [ ! -d "$DEST_PATH" ]; then
 	fi
 fi
 
-sudo mv $CUR_FOLDER $DEST_PATH
+sudo mv 'eclipse' $DEST_PATH$CUR_FOLDER
 RETVAL=$?
 if [ $RETVAL -ne 0 ]; then
-	echo 'failed to move '$CUR_FOLDER' to '$DEST_PATH
+	echo 'failed to move eclipse folder to '$DEST_PATH$CUR_FOLDER
 	exit 1
 fi
 
