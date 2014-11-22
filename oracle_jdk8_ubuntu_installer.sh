@@ -6,9 +6,6 @@
 # License: GPLv3
 # Version: 0.94.1
 #
-
-#wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u25-b17/jdk-8u25-linux-x64.tar.gz" --output-document=jdk-8u25-linux-x64.tar.gz
-
  
 CUR_FOLDER="jdk1.8.0_25"
 ORACLE_DOWNLOAD_PATH="http://download.oracle.com/otn-pub/java/jdk/8u25-b17/"
